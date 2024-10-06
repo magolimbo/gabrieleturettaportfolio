@@ -1,0 +1,175 @@
+/* Reset some default margins */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 900;
+  font-style: normal;
+
+}
+
+.hero {
+  background-color: #0b24fb;
+  height: 100vh;  
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: right;
+  padding-top: 60px;
+  /* border: 4px solid yellow; */
+}
+
+.footer{
+  /* border: 1px solid red; */
+  position: fixed;
+  bottom: 0;
+  z-index: 200;
+  background-color: transparent;
+  width: 100%;
+}
+
+.footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.footer nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  /* font-weight: 300; */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
+  /* border: 1px solid red; */
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 70px;
+}
+
+.navbar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Projects Section (below the fold) */
+.projects {
+  background-color: #0b24fb;
+  min-height: 100vh;
+  padding: 50px;
+  color: white;
+}
+
+/* About and Contact Sections */
+.about, .contact {
+  background-color: #f4f4f4;
+  padding: 50px;
+  text-align: center;
+}
+
+.about h2, .contact h2 {
+  margin-bottom: 20px;
+}
+
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 5s linear infinite; /* Aggiungi animazione */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assicura che il video si adatti senza distorsione */
+  z-index: 1; /* Mette il video dietro al contenuto */
+}
+
+/*square box around project links*/
+.projects-link {
+  display: inline-block; /* Permette al div di prendere solo lo spazio necessario */
+  padding: 0px 30px; /* Spaziatura interna */
+  border: 1px solid #fff; /* Bordo del rettangolo */
+  border-radius: 100px; /* Angoli arrotondati */
+}
+
+
+/*projects section*/
+.project-categories {
+  display: flex;
+  justify-content: center;
+  margin: 90px 0;
+}
+
+.project-categories button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: none; /* Rimuove lo sfondo */
+  border: none; /* Rimuove il bordo */
+  color: white; /* Colore del testo, puoi cambiarlo come preferisci */
+  font-size: 70px; /* Dimensione del font, puoi modificarlo */
+  font-weight: 300;
+}
+
+.project-categories button:hover {
+  color: red; /* Cambia il colore al passaggio del mouse, puoi modificarlo */
+}
+
+.project-categories button:focus {
+  text-decoration: underline;
+  background: none; /* Assicurati che non ci sia sfondo */
+  border: none; /* Assicurati che non ci sia bordo */
+  outline: none; /* Rimuove il contorno di default */
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-item {
+  margin: 10px;
+  text-align: center;
+  width: 200px; /* Regola la larghezza come preferisci */
+}
+
